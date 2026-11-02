@@ -1,5 +1,7 @@
 # Making Systems Fail-Aware
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23890438.svg)](https://doi.org/10.5281/zenodo.23890438)
+
 Code for the paper "Making Systems Fail-Aware: A Semi-Supervised Machine Learning Approach for Identifying Failures by Learning the Correct Behavior of a System" by Herbert Muehlburger and Franz Wotawa (12th IFAC Symposium SAFEPROCESS 2024, IFAC-PapersOnLine 58(4), 7-12, [doi:10.1016/j.ifacol.2024.07.185](https://doi.org/10.1016/j.ifacol.2024.07.185)).
 
 A Bi-LSTM forecaster learns the nominal behavior of a battery controller signal from healthy simulation data. Forecast errors above a threshold raise an alarm.
