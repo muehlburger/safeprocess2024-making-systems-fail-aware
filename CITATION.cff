@@ -1,0 +1,30 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite the paper."
+title: "Making Systems Fail-Aware: A Semi-Supervised Machine Learning Approach for Identifying Failures by Learning the Correct Behavior of a System"
+type: software
+license: MIT
+repository-code: "https://github.com/muehlburger/safeprocess2024-making-systems-fail-aware"
+authors:
+  - family-names: Mühlburger
+    given-names: Herbert
+    affiliation: "Graz University of Technology"
+    orcid: "https://orcid.org/0000-0002-7672-0501"
+  - family-names: Wotawa
+    given-names: Franz
+    affiliation: "Graz University of Technology"
+    orcid: "https://orcid.org/0000-0002-0462-2283"
+preferred-citation:
+  type: article
+  title: "Making Systems Fail-Aware: A Semi-Supervised Machine Learning Approach for Identifying Failures by Learning the Correct Behavior of a System"
+  authors:
+    - family-names: Mühlburger
+      given-names: Herbert
+    - family-names: Wotawa
+      given-names: Franz
+  journal: "IFAC-PapersOnLine"
+  volume: 58
+  issue: 4
+  start: 7
+  end: 12
+  year: 2024
+  doi: "10.1016/j.ifacol.2024.07.185"

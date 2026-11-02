@@ -1,0 +1,122 @@
+# Here you can define all your data sets by using simple YAML syntax.
+#
+# Documentation for this file format can be found in "The Data Catalog"
+# Link: https://kedro.readthedocs.io/en/stable/data/data_catalog.html
+raw_data:
+  type: pandas.CSVDataset
+  filepath: data/01_raw/battery_healthy.csv
+  metadata: raw
+
+test_data:
+  type: pandas.CSVDataset
+  filepath: data/01_raw/battery_runtime_fault1.csv
+  metadata: raw
+
+processed_data:
+  type: pandas.CSVDataset
+  filepath: data/02_intermediate/processed_data.csv
+  metadata: intermediate
+
+processed_test_data:
+  type: pandas.CSVDataset
+  filepath: data/02_intermediate/processed_test_data.csv
+  metadata: intermediate
+
+series_plot:
+  type: matplotlib.MatplotlibWriter
+  filepath: data/05_model_input/series_plot.pdf
+  save_args:
+    format: pdf
+
+test_series_plot:
+  type: matplotlib.MatplotlibWriter
+  filepath: data/05_model_input/test_series_plot.pdf
+  save_args:
+    format: pdf
+
+series:
+  type: pandas.CSVDataset
+  filepath: data/05_model_input/series.csv
+  metadata: primary
+
+test_series:
+  type: pandas.CSVDataset
+  filepath: data/05_model_input/test_series.csv
+  metadata: primary
+
+x_train:
+  type: MemoryDataset
+  copy_mode: assign
+
+x_valid:
+  type: MemoryDataset
+  copy_mode: assign
+
+train:
+  type: MemoryDataset
+  copy_mode: assign
+
+valid:
+  type: MemoryDataset
+  copy_mode: assign
+
+test:
+  type: MemoryDataset
+  copy_mode: assign
+
+scaler:
+  type: pickle.PickleDataset
+  filepath: data/04_feature/scaler.pkl
+
+naive_forecast:
+  type: pandas.CSVDataset
+  filepath: data/07_model_output/naive_forecast.csv
+  metadata: primary
+  save_args:
+    index: False
+
+train_data:
+  type: pandas.CSVDataset
+  filepath: data/04_feature/train_data.csv
+  metadata: 04_feature
+
+train_score:
+  type: matplotlib.MatplotlibWriter
+  filepath: data/08_reporting/train_score.pdf
+  save_args:
+    format: pdf
+
+test_score:
+  type: matplotlib.MatplotlibWriter
+  filepath: data/08_reporting/test_score.pdf
+  save_args:
+    format: pdf
+
+predictions:
+  type: pandas.CSVDataset
+  filepath: data/07_model_output/predictions.csv
+  metadata: model_output
+
+simple_dnn_predictions:
+  type: matplotlib.MatplotlibWriter
+  filepath: data/08_reporting/simple_dnn_predictions.pdf
+  save_args:
+    format: pdf
+
+test_vs_predictions:
+  type: matplotlib.MatplotlibWriter
+  filepath: data/08_reporting/test_vs_predictions.pdf
+  save_args:
+    format: pdf
+
+eval_train:
+  type: matplotlib.MatplotlibWriter
+  filepath: data/08_reporting/eval_train.pdf
+  save_args:
+    format: pdf
+
+eval_test:
+  type: matplotlib.MatplotlibWriter
+  filepath: data/08_reporting/eval_test.pdf
+  save_args:
+    format: pdf

@@ -1,0 +1,28 @@
+model_options:
+  epochs: 60
+  learning_rate: 0.001
+  batch_size: 120
+  window_size: 60
+  shuffle_buffer_size: 1000
+  train_size: 0.95
+  #feature: temperature_degC_5
+  #feature: temperature_degC_6
+  #feature: volflow_l_min
+  #feature: amperage_A
+  #feature: velocity_km_h
+  
+# Thresholds for anomaly detection
+  threshold_temperature_degC_5: 1.0482453343652267
+  threshold_temperature_degC_6: 1.3727714254855172
+  threshold_volflow_l_min: 1.7041347270488565
+#  threshold_velocity_km_h: 58.85163220903051
+  threshold_amperage_A: 6.6518858322615095
+
+filename_normal_predictions: train_predictions
+#filename_test_predictions: test_predictions
+filename_test_vs_predictions: test_predictions
+
+width: 345
+
+filename_results_csv: results
+filename_thresholds_csv: thresholds

@@ -1,0 +1,17 @@
+__pycache__/
+*.py[cod]
+.DS_Store
+.ipynb_checkpoints/
+.venv/
+venv/
+wandb/
+logs/
+*.log
+conf/local/*
+!conf/local/.gitkeep
+data/02_intermediate/*
+data/04_feature/*
+data/05_model_input/*
+data/07_model_output/*
+!data/**/.gitkeep
+data/08_reporting/*.pdf
